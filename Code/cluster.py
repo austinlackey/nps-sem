@@ -3,6 +3,9 @@ import pandas as pd # Matrix Operations
 from pandas import ExcelWriter
 import numpy as np # Linear Algebra
 import os # OS Functions
+from pathlib import Path # File Pathing
+
+relative_path = Path("..") # Setting relative path that is os agnostic
 
 # GRAPHING
 import matplotlib.pyplot as plt
@@ -51,12 +54,12 @@ from tqdm import tqdm # Progress Bar
 from sklearn.metrics.pairwise import haversine_distances # Distance around Earth's curvature
 from math import radians, isnan
 import requests # HTTP requests
+from requests.adapters import HTTPAdapter, Retry # Retry requests
 from bs4 import BeautifulSoup # HTML Parser
 import pgeocode # Zipcode to Coordinates
-import pycountry_convert as pc
-import time
-import logging
-from requests.adapters import HTTPAdapter, Retry
+import pycountry_convert as pc # Country to Continent
+import time # Time functions
+import logging # Logging
 
 class COLOR:
     """Class for displaying colored text in console outputs
