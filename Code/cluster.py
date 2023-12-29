@@ -36,6 +36,7 @@ from gensim.models import *
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
+from sentence_transformers import SentenceTransformer
 
 # MISC
 import distinctipy # Generate n colors
@@ -211,7 +212,7 @@ class NLP():
     
 
     """
-    def __init__(self, data: pd.Series, embedding_model: gensim.models.keyedvectors.KeyedVectors = None, echo: bool = True, reset_seeds: bool = True, model_name: string = None) -> Any:
+    def __init__(self, data: pd.Series, embedding_model = None, echo: bool = True, reset_seeds: bool = True, model_name: string = None) -> Any:
         """ NLP class to hold cluster information/data
 
         Parameters:
@@ -269,8 +270,9 @@ class NLP():
         
         # Creating the Model
         if embedding_model is None: # Create own model
-            self.embedding_model = Word2Vec(sentences=self.tokenized_docs, vector_size=100, workers=1, seed=seed) # Feeding the tokenized values into the model
-            self.vectorized_docs = vectorize(self.tokenized_docs, model=self.embedding_model) # Creating vectors for each doc
+            print("NO MODEL")
+            # self.embedding_model = Word2Vec(sentences=self.tokenized_docs, vector_size=100, workers=1, seed=seed) # Feeding the tokenized values into the model
+            # self.vectorized_docs = vectorize(self.tokenized_docs, model=self.embedding_model) # Creating vectors for each doc
         else: # Use API model
             self.embedding_model = embedding_model
             self.vectorized_docs = vectorize(self.tokenized_docs, model=self.embedding_model, api_model=True)
@@ -599,7 +601,7 @@ class NLP():
         color_list = distinctipy.get_colors(self.num_clusters)
         # self.datapoints['colorCode'] = [color_list[x] for x in self.datapoints['cluster']]
         self.datapoints['colorCode'] = [(0,0,0) if x == -1 else color_list[x] for x in self.datapoints['cluster']] # -1 only gets used for DBSCAN models (Makes unused points the Black cluster)
-        self.datapoints['alpha'] = [0.05 if x == -1 else 0.3 for x in self.datapoints['cluster']] # -1 only gets used for DBSCAN models (Makes Black points more transparent)
+        # self.datapoints['alpha'] = [0.05 if x == -1 else 0.3 for x in self.datapoints['cluster']] # -1 only gets used for DBSCAN models (Makes Black points more transparent)
         chart_data = self.datapoints.copy()
         if jitter:
             chart_data.component1 = chart_data.component1 + np.random.normal(jitter_amount, jitter_amount, chart_data.component1.shape)
@@ -612,8 +614,7 @@ class NLP():
         
         f, ax = plt.subplots(figsize=figsize)
         sns.set_style('white')
-        print(self.datapoints['alpha'])
-        sns.scatterplot(data=chart_data, x=chart_data.component1, y=chart_data.component2, hue='cluster', palette=color_list, alpha=self.datapoints['alpha'].values, edgecolor = None)
+        sns.scatterplot(data=chart_data, x=chart_data.component1, y=chart_data.component2, hue='cluster', palette=color_list, alpha=0.3, edgecolor = None)
         # sns.scatterplot(data=chart_data, x=jitter(chart_data.component1, 0.01), y=jitter(chart_data.component2, 0.01), hue='cluster', palette=color_list, alpha=self.datapoints['alpha'], edgecolor = None)
         plt.xlabel("Component 1")
         plt.ylabel("Component 2")
