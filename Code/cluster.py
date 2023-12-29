@@ -612,7 +612,8 @@ class NLP():
         
         f, ax = plt.subplots(figsize=figsize)
         sns.set_style('white')
-        sns.scatterplot(data=chart_data, x=chart_data.component1, y=chart_data.component2, hue='cluster', palette=color_list, alpha=self.datapoints['alpha'], edgecolor = None)
+        print(self.datapoints['alpha'])
+        sns.scatterplot(data=chart_data, x=chart_data.component1, y=chart_data.component2, hue='cluster', palette=color_list, alpha=self.datapoints['alpha'].values, edgecolor = None)
         # sns.scatterplot(data=chart_data, x=jitter(chart_data.component1, 0.01), y=jitter(chart_data.component2, 0.01), hue='cluster', palette=color_list, alpha=self.datapoints['alpha'], edgecolor = None)
         plt.xlabel("Component 1")
         plt.ylabel("Component 2")
@@ -638,7 +639,8 @@ class NLP():
             plt.legend([],[], frameon=False)
         plt.show()
         if save:
-            f.savefig(r'..\Writeup Files/temp_plot.png', transparent=True)
+            filepath = relative_path / 'Writeup Files' / 'temp_plot.png'
+            f.savefig(filepath, transparent=True)
             print("Saved plot as temp_plot.png")
 
     """Output a frequency table for a set of values.
@@ -667,16 +669,13 @@ def build_frequency_table(values: pd.Series, dropna: bool = False, dec: int = 3)
     df['pct'] = round(df['count'] / sum(df['count']), dec)
     return(df)
 
-def translate_response_codes(values: pd.Series = None) -> pd.Series:
+def translate_response_codes(values: pd.Series = None, data_ref = None) -> pd.Series:
     if (values is None): # Ensure paramters are specified
         print("ERROR: Specify Series.")
-    
-    global data_ref1 # Dictionary Reference
-
     # Return unchanged values if the variable is not in the dictionary.
-    if values.name not in data_ref1['variable'].to_list():
+    if values.name not in data_ref['variable'].to_list():
         return(values)
-    ref_table = data_ref1[data_ref1['variable'] == values.name] # Grab the variable information that matches
+    ref_table = data_ref[data_ref['variable'] == values.name] # Grab the variable information that matches
     var_refs = ref_table[['value', 'value_label']].set_index('value')['value_label'].to_dict() # Convert to dict
     new_values = values.map(var_refs) # Replace values with dict values
     return(new_values)
@@ -699,9 +698,9 @@ def merge_model_data(models: list = None) -> pd.DataFrame:
         merged_data = pd.concat([merged_data, data]).reset_index(drop=True) # Concat the data to the frame
     return(merged_data)
 
-def update_geodesic_park_data(n: bool = None):
-    global coded_data
-    parkData = pd.read_excel(r'..\Data\parkInformation.xlsx', 
+def update_geodesic_park_data(coded_data, n: bool = None):
+    filepath = relative_path / 'Data' / 'parkInformation.xlsx'
+    parkData = pd.read_excel(filepath, 
                   names=['park_id', 'unit_code', 'name', 'designation', 'population_center',
                          'region', 'stats_reporting', 'sem_eligible', 'use_type', 'size',
                          'sem_draw'])
@@ -712,14 +711,13 @@ def update_geodesic_park_data(n: bool = None):
 def is_mainland_us(state):
     return 'Show only Mainland US States' if state not in ['Hawaii', 'Alaska'] else None
 
-def code_data(data: pd.DataFrame = None, ref_vars: pd.DataFrame = None, save: bool = False):
-    if (data is None) or (ref_vars is None): # Ensure paramters are specified
+def code_data(data_clean: pd.DataFrame = None, data_ref: pd.DataFrame = None, save: bool = False, geodesic_park_information: pd.DataFrame = None) -> pd.DataFrame:
+    if (data_clean is None) or (data_ref is None): # Ensure paramters are specified
         print("ERROR: Insufficient Information.")
         return
-    global data_clean
-    readable_columns = list(set(data_clean.columns) & set(data_ref1['variable'])) # Readable columns are in the intersection with the data dictionary
+    readable_columns = list(set(data_clean.columns) & set(data_ref['variable'])) # Readable columns are in the intersection with the data dictionary
     coded_data = data_clean.copy() # Drop un-needed column and copy data
-    coded_data[readable_columns] = coded_data[readable_columns].apply(translate_response_codes, axis=0).copy() # Convert each column to the readable values from the dictionary
+    coded_data[readable_columns] = coded_data[readable_columns].apply(translate_response_codes, args=(data_ref,), axis=0).copy() # Convert each column to the readable values from the dictionary
     coded_data = coded_data.join(coded_data['s_npssite'].str.split(' - ', n=1, expand=True).rename(columns={0:'x_unitcode', 1:'x_parkname'})).drop(columns=['x_parkname', 's_npssite']) # Extract the park unit code and park name
     coded_data = coded_data.reset_index().rename(columns={'index': 'orig_index'})
     coded_data['x_unitcode'] = coded_data['x_unitcode'].str.replace(' ', '')
@@ -729,7 +727,7 @@ def code_data(data: pd.DataFrame = None, ref_vars: pd.DataFrame = None, save: bo
     coded_data = coded_data.join(geodesic_user_information)
     print(COLOR.BOLD, 'Added the users geodesic data.', COLOR.END, sep='')
 
-    coded_data['x_distance_traveled'] = coded_data[['x_user_latitude', 'x_user_longitude', 'x_unitcode']].apply(lambda x: compute_haversine_distance(*x), axis=1)
+    coded_data['x_distance_traveled'] = coded_data[['x_user_latitude', 'x_user_longitude', 'x_unitcode']].apply(lambda x: compute_haversine_distance(*x, geodesic_park_information), axis=1)
     coded_data['x_distance_traveled'] = coded_data['x_distance_traveled'].astype("Float64")
 
     coded_data['x_race'] = coded_data[['m_race_native', 
@@ -833,10 +831,12 @@ def lookup_park_address_info(unitCodes: list = None) -> pd.DataFrame():
     retries = Retry(total=5, backoff_factor=1, status_forcelist=[ 502, 503, 504 ]) # Setup retry succesion
     session.mount('http://', HTTPAdapter(max_retries=retries))
     logging.getLogger("urllib3").setLevel(logging.WARNING) # Disable console logs
-    manualParks = pd.DataFrame({'unitCode': ['WWIM', 'TUSK', 'YOSE'], 
+    manualParks = pd.DataFrame({'unitCode': ['WWIM', 'TUSK', 'YOSE', 'SAND', 'INDE'], 
                                'address': ['1750 Independence Ave SW, Washington, DC 20024',
                                            '4400 Horse Dr, North Las Vegas, NV 89085',
-                                           'Po Box 577, Yosemite National Park, CA 95389']})
+                                           'Po Box 577, Yosemite National Park, CA 95389',
+                                           '2995 Lincoln Farm Road, Hodgenville, Kentucky 42748',
+                                           '143 South Third Street, Philadelphia, PA 19106']})
     address_book = [] # List to store address information
     pbar = tqdm(unitCodes, unit="Parks", desc="Finding Addresses... ")
     for code in pbar:
@@ -883,7 +883,7 @@ def lookup_park_address_info(unitCodes: list = None) -> pd.DataFrame():
     print("Addresses Collected.")
     return(address_book)
 
-def compute_haversine_distance(u_lat: float = None, u_lon: float = None, p_unitcode: string = None) -> float:
+def compute_haversine_distance(u_lat: float = None, u_lon: float = None, p_unitcode: string = None, geodesic_park_information: pd.DataFrame = None) -> float:
     """ Return dista
     
     Parameters:
@@ -891,7 +891,6 @@ def compute_haversine_distance(u_lat: float = None, u_lon: float = None, p_unitc
     Returns:
     (float): Distance in miles between the two coordinates
     """
-    global geodesic_park_information
     if isnan(u_lat) or isnan(u_lon) or (p_unitcode is None):
         return(np.nan)
     geodesic_info = pd.DataFrame([geodesic_park_information[geodesic_park_information['unit_code'] == p_unitcode][['latitude', 'longitude']].values[0], [u_lat, u_lon]])
@@ -912,7 +911,8 @@ def save_model(model: NLP = None, filename: string = None, echo: bool = True) ->
         print("ERROR: Specify Filename/Model")
     else:
         # Save Model
-        with open(str(r'..\Models' + '\\' +  filename + ".pickle"), 'wb') as file_:
+        filepath = relative_path / 'Models' / (filename + '.pickle') # this filepath has not been tested to work on all systems
+        with open(filepath, 'wb') as file_:
             pickle.dump(model, file_, -1)
             if echo:
                 print('Model Saved.')
@@ -927,7 +927,8 @@ def load_model(filename: string = None, echo: bool = True) -> NLP:
         print("ERROR: Specify Filename")
     else:
         # Open Model
-        model = pickle.load(open(str(r'..\Models' + '\\' +  filename + ".pickle"), 'rb', -1))
+        filepath = relative_path / 'Models' / (filename + '.pickle') # this filepath has not been tested to work on all systems
+        model = pickle.load(open(filepath, 'rb', -1))
         if echo:
             print('Model Loaded.')
         return(model)
@@ -946,18 +947,20 @@ def save_data(df: pd.DataFrame = None, filename: string = None, echo: bool = Tru
         if parquet:
             if echo:
                 print("Saving Data(.parquet)...")
-            df.to_parquet(str(r'..\Data' + '\\' +  filename + ".parquet"))
+            filepath = relative_path / 'Data' / (filename + '.parquet')
+            df.to_parquet(filepath)
         if excel:
             if echo:
                 print("Saving Data(.xlsx)...")
-            df.to_excel(str(r'..\Data' + '\\' +  filename + ".xlsx"), index=False)
+            filepath = relative_path / 'Data' / (filename + '.xlsx')
+            df.to_excel(filepath, index=False)
         if echo:
             print(COLOR.GREEN, COLOR.BOLD, 'SUCCESS: ', filename, ' Data Saved.', COLOR.END, sep='')
 def save_pivot_data(df_list: list = None, names: list = None, echo: bool = True):
     if df_list is None or names is None:
         print("ERROR: Specify Names/DataFrame")
     else:
-        path = r'..\Data\pivot_data.xlsx'
-        with ExcelWriter(path) as writer:
+        filepath = relative_path / 'Data' / 'pivot_data.xlsx'
+        with ExcelWriter(filepath) as writer:
             for n, df in enumerate(df_list):
                 df.to_excel(writer, sheet_name = names[n], index=False)
