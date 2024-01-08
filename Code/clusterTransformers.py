@@ -17,7 +17,6 @@ import seaborn.objects as so
 from scipy.ndimage.filters import gaussian_filter
 from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
-# %matplotlib inline
 
 # MACHINE LEARNING
 from sklearn.cluster import KMeans, MiniBatchKMeans, DBSCAN, SpectralClustering, OPTICS
@@ -148,6 +147,15 @@ def mean_pooling(model_output, attention_mask):
     input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
     return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 
+def sort_responses(data: pd.DataFrame = None, length: int = 10) -> None:
+    # remove nan values
+    data = data[~data.isnull()].to_list()
+    sorted_responses = sorted(data, key=len, reverse=True)
+    sorted_responses = sorted_responses[:length]
+    print("Top - Character Length - Token Count - Response")
+    for i, response in enumerate(sorted_responses):
+        print(i+1, len(response), len(response.split()), response)
+
 class NLP():
     """Class to hold information, data and function for Natural Language Proccessing(NLP) clusters.
     
@@ -203,13 +211,6 @@ class NLP():
         tokenizer = AutoTokenizer.from_pretrained(model_name)
         model = AutoModel.from_pretrained(model_name)
         responses = responses['variable']
-
-
-        # print the top 10 longest sentences in responses
-        # sorted_responses = sorted(responses, key=len, reverse=True)
-        # sorted_responses = sorted_responses[:10]
-        # for i, response in enumerate(sorted_responses):
-        #     print(i, len(response), len(response.split()), response)
 
         # omit responses in respones that have more than 60 tokens
         token_limit = 100
@@ -640,6 +641,8 @@ def code_data(data_clean: pd.DataFrame = None, data_ref: pd.DataFrame = None, sa
     coded_data['n_yearvisit'] = coded_data['n_yearvisit'].replace({np.nan: 1})
     coded_data['x_user_continent'] = coded_data['s_country_int'].apply(lambda x: country_to_continent(x))
     coded_data['x_user_mainland'] = coded_data['x_user_state_name'].apply(is_mainland_us)
+    # where coded_data['weight_peak'] is 0, replace with 0.00001
+    coded_data['weight_peak'] = coded_data['weight_peak'].replace({0: 0.00001})
     print("Data Coded.")
     if save:
         save_data(coded_data, 'codedData')
