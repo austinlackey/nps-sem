@@ -641,8 +641,8 @@ def code_data(data_clean: pd.DataFrame = None, data_ref: pd.DataFrame = None, sa
     coded_data['n_yearvisit'] = coded_data['n_yearvisit'].replace({np.nan: 1})
     coded_data['x_user_continent'] = coded_data['s_country_int'].apply(lambda x: country_to_continent(x))
     coded_data['x_user_mainland'] = coded_data['x_user_state_name'].apply(is_mainland_us)
-    # where coded_data['weight_peak'] is 0, replace with 0.00001
-    coded_data['weight_peak'] = coded_data['weight_peak'].replace({0: 0.00001})
+    # Change Weights for parks that have a weight of 0. This will allow their specific stats to work, but they do not affect the overall numbers.
+    coded_data['weight_peak'] = coded_data['weight_peak'].replace({0: 0.00001}) # Replace 0 weights with 0.00001
     print("Data Coded.")
     if save:
         save_data(coded_data, 'codedData')
