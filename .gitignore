@@ -1,2 +1,4 @@
 .DS_Store
 Code/__pycache__
+# ignore ~$ files from Data/
+Data/~$*
