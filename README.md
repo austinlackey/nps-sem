@@ -48,4 +48,4 @@ My methodology for this project is explained in detail in the following
 ![Cluster Analysis](https://github.com/austinlackey/nps-sem/blob/main/Writeup%20Files/Figures/o_least1.png)
 
 ### Power BI Dashboard
-![Power BI Dashboard](https://github.com/austinlackey/nps-sem/blob/main/Writeup%20Files/Dasboard.png)
+![Power BI Dashboard](https://github.com/austinlackey/nps-sem/blob/main/Writeup%20Files/Dashboard.png)
