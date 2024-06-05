@@ -1,0 +1,410 @@
+﻿park_id,unit_code,name,designation,population_center,region
+645,KAWW,Katahdin Woods and Waters NM,National Monument,Outlying Area,Northeast  Region
+646,CANE,Camp Nelson NM,National Monument,Outlying Area,Southeast  Region
+647,WWIM,World War I Memorial,National Memorial,Urban Area,National Capital  Region
+649,ALAG,Alagnak Wild River,National Wild & Scenic River,Remote Area,Alaska Region
+650,TUSK,Tule Springs Fossil Beds NM,National Monument,Suburban Area,Pacific West  Region
+443,AMIS,Amistad NRA,National Recreation Area,Rural Area,Intermountain  Region
+157,DESO,De Soto NMEM,National Memorial,Urban Area,Southeast  Region
+159,CRLA,Crater Lake NP,National Park,Rural Area,Pacific West  Region
+161,FLFO,Florissant Fossil Beds NM,National Monument,Outlying Area,Intermountain  Region
+169,EISE,Eisenhower NHS,National Historic Site,Outlying Area,Northeast  Region
+624,CECH,Cesar E. Chavez NM,National Monument,Outlying Area,Pacific West  Region
+635,KEWE,Keweenaw NHP,National Historical Park,Rural Area,Midwest  Region
+640,CAWO,Carter G. Woodson Home NHS,National Historic Site,Urban Area,National Capital  Region
+641,STON,Stonewall NM,National Monument,Urban Area,Northeast  Region
+642,EBLA,Ebey's Landing,National Reserve,Rural Area,Pacific West  Region
+651,BICR,Birmingham Civil Rights NM,National Monument,Urban Area,Southeast  Region
+661,CEBE,Cedar Creek and Belle Grove,National Historical Park,Mixed Area,Northeast  Region
+662,FRST,First State NHP,National Historical Park,Suburban Area,Northeast  Region
+663,HART,Harriet Tubman NHP,National Historical Park,Rural Area,Northeast  Region
+625,CHYO,Charles Young Buffalo Soldiers NM,National Monument,Outlying Area,Midwest  Region
+628,WACO,Waco Mammoth NM,National Monument,Outlying Area,Intermountain  Region
+629,HONO,Honouliuli NHS,National Historic Site,Outlying Area,Pacific West  Region
+261,TICA,Timpanogos Cave NM,National Monument,Outlying Area,Intermountain  Region
+353,WEFA,Weir Farm NHP,National Historical Park,Urban Area,Northeast  Region
+93,ABLI,Abraham Lincoln Birthplace NHP,National Historical Park,Outlying Area,Southeast  Region
+91,BLUE,Bluestone NSR,National Wild & Scenic River,Rural Area,Northeast  Region
+357,VAMA,Vanderbilt Mansion NHS,National Historic Site,Outlying Area,Northeast  Region
+297,GATE,Gateway NRA,National Recreation Area,Suburban Area,Northeast  Region
+604,TUAI,Tuskegee Airmen NHS,National Historic Site,Rural Area,Southeast  Region
+196,HEHO,Herbert Hoover NHS,National Historic Site,Rural Area,Midwest  Region
+141,NICO,Nicodemus NHS,National Historic Site,Rural Area,Midwest  Region
+143,THST,Thomas Stone NHS,National Historic Site,Suburban Area,Northeast  Region
+144,THKO,Thaddeus Kosciuszko NMEM,National Memorial,Urban Area,Northeast  Region
+145,TUZI,Tuzigoot NM,National Monument,Outlying Area,Intermountain  Region
+241,LACH,Lake Chelan NRA,National Recreation Area,Outlying Area,Pacific West  Region
+98,AZRU,Aztec Ruins NM,National Monument,Outlying Area,Intermountain  Region
+99,CLBA,Clara Barton NHS,National Historic Site,Urban Area,National Capital  Region
+100,BEOL,Bent's Old Fort NHS,National Historic Site,Rural Area,Intermountain  Region
+242,SAJH,San Juan Island NHP,National Historical Park,Remote Area,Pacific West  Region
+365,FORA,Fort Raleigh NHS,National Historic Site,Rural Area,Southeast  Region
+110,BOWA,Booker T. Washington NM,National Monument,Outlying Area,Northeast  Region
+111,DETO,Devils Tower NM,National Monument,Rural Area,Intermountain  Region
+117,CATO,Catoctin Mountain Park,Park (Other),Suburban Area,National Capital  Region
+119,FOPU,Fort Pulaski NM,National Monument,Outlying Area,Southeast  Region
+120,CUIS,Cumberland Island NS,National Seashore,Rural Area,Southeast  Region
+121,JAGA,James A. Garfield NHS,National Historic Site,Urban Area,Midwest  Region
+122,GICL,Gila Cliff Dwellings NM,National Monument,Rural Area,Intermountain  Region
+168,CABR,Cabrillo NM,National Monument,Urban Area,Pacific West  Region
+123,LACL,Lake Clark NP & PRES,National Park,Remote Area,Alaska Region
+124,HOVE,Hovenweep NM,National Monument,Rural Area,Intermountain  Region
+125,JICA,Jimmy Carter NHP,National Historical Park,Rural Area,Southeast  Region
+126,OZAR,Ozark NSR,National River,Rural Area,Midwest  Region
+127,MONO,Monocacy NB,National Battlefield,Suburban Area,National Capital  Region
+128,LYBA,LBJ Memorial Grove on the Potomac,National Memorial,Urban Area,National Capital  Region
+131,MABI,Marsh-Billings-Rockefeller NHP,National Historical Park,Rural Area,Northeast  Region
+130,GOSP,Golden Spike NHP,National Historical Park,Outlying Area,Intermountain  Region
+132,NOAT,Noatak NPRES,National Preserve,Remote Area,Alaska Region
+133,NISI,Ninety Six NHS,National Historic Site,Rural Area,Southeast  Region
+148,PRWI,Prince William Forest Park,Park (Other),Suburban Area,National Capital  Region
+149,WAMO,Washington Monument,National Memorial,Urban Area,National Capital  Region
+150,WHSA,White Sands NP,National Park,Mixed Area,Intermountain  Region
+151,WIHO,William Howard Taft NHS,National Historic Site,Urban Area,Midwest  Region
+152,STEA,Steamtown NHS,National Historic Site,Urban Area,Northeast  Region
+359,FOSU,Fort Sumter and Fort Moultrie NHP,National Historical Park,Mixed Area,Southeast  Region
+444,RIGR,Rio Grande W&SR,National Wild & Scenic River,Rural Area,Intermountain  Region
+166,CRMO,Craters of the Moon NM & PRES,National Monument,Mixed Area,Pacific West  Region
+167,ELMO,El Morro NM,National Monument,Rural Area,Intermountain  Region
+158,BIHO,Big Hole NB,National Battlefield,Rural Area,Pacific West  Region
+165,ELRO,Eleanor Roosevelt NHS,National Historic Site,Urban Area,Northeast  Region
+138,MOCA,Montezuma Castle NM,National Monument,Outlying Area,Intermountain  Region
+139,AGFO,Agate Fossil Beds NM,National Monument,Rural Area,Midwest  Region
+171,CAHA,Cape Hatteras NS,National Seashore,Rural Area,Southeast  Region
+173,CAGR,Casa Grande Ruins NM,National Monument,Suburban Area,Intermountain  Region
+193,HAFO,Hagerman Fossil Beds NM,National Monument,Outlying Area,Pacific West  Region
+177,EUON,Eugene O'Neill NHS,National Historic Site,Suburban Area,Pacific West  Region
+190,FOLS,Fort Larned NHS,National Historic Site,Rural Area,Midwest  Region
+608,WWII,World War II Memorial,National Memorial,Urban Area,National Capital  Region
+445,CIRO,City of Rocks NRES,National Reserve,Rural Area,Pacific West  Region
+192,FOSC,Fort Scott NHS,National Historic Site,Rural Area,Midwest  Region
+181,BADL,Badlands NP,National Park,Mixed Area,Midwest  Region
+92,ANTI,Antietam NB,National Battlefield,Outlying Area,National Capital  Region
+97,CHIR,Chiricahua NM,National Monument,Outlying Area,Intermountain  Region
+186,KICA,Kings Canyon NP,National Park,Suburban Area,Pacific West  Region
+188,FODO,Fort Donelson NB,National Battlefield,Mixed Area,Southeast  Region
+204,KLSE,Klondike Gold Rush NHP Seattle,National Historical Park,Urban Area,Pacific West  Region
+195,GEWA,George Washington Birthplace NM,National Monument,Rural Area,Northeast  Region
+206,GWCA,George Washington Carver NM,National Monument,Outlying Area,Midwest  Region
+209,GEGR,General Grant NMEM,National Memorial,Urban Area,Northeast  Region
+211,GERO,George Rogers Clark NHP,National Historical Park,Rural Area,Midwest  Region
+218,HOFR,Home of Franklin D. Roosevelt NHS,National Historic Site,Urban Area,Northeast  Region
+219,MOJA,Mojave NPRES,National Preserve,Suburban Area,Pacific West  Region
+220,MOCR,Moores Creek NB,National Battlefield,Outlying Area,Southeast  Region
+208,GRSA,Great Sand Dunes NP & PRES,National Park,Rural Area,Intermountain  Region
+210,KEMO,Kennesaw Mountain NBP,National Battlefield Park,Urban Area,Southeast  Region
+215,KIMO,Kings Mountain NMP,National Military Park,Mixed Area,Southeast  Region
+214,LABE,Lava Beds NM,National Monument,Rural Area,Pacific West  Region
+216,JOFL,Johnstown Flood NMEM,National Memorial,Outlying Area,Northeast  Region
+217,MIMA,Minute Man NHP,National Historical Park,Mixed Area,Northeast  Region
+262,SAAN,San Antonio Missions NHP,National Historical Park,Urban Area,Intermountain  Region
+633,VALL,Valles Caldera NPRES,National Preserve,Outlying Area,Intermountain  Region
+634,MIIN,Minidoka NHS,National Historic Site,Rural Area,Pacific West  Region
+655,FRRI,Freedom Riders NM,National Monument,Urban Area,Southeast  Region
+656,HATU,Harriet Tubman Underground Railroad NHP,National Historical Park,Rural Area,Northeast  Region
+657,MISP,Mill Springs Battlefield NM,National Monument,Rural Area,Southeast  Region
+658,STGE,Ste. Genevieve NHP,National Historical Park,Rural Area,Midwest  Region
+659,REER,Reconstruction Era NHP,National Historical Park,Outlying Area,Southeast  Region
+660,TULE,Tule Lake NM,National Monument,Rural Area,Pacific West  Region
+221,NATC,Natchez NHP,National Historical Park,Rural Area,Southeast  Region
+222,NABR,Natural Bridges NM,National Monument,Rural Area,Intermountain  Region
+225,OCMU,Ocmulgee Mounds NHP,National Historical Park,Mixed Area,Southeast  Region
+226,PECO,Pecos NHP,National Historical Park,Rural Area,Intermountain  Region
+243,RUCA,Russell Cave NM,National Monument,Rural Area,Southeast  Region
+227,KNRI,Knife River Indian Villages NHS,National Historic Site,Rural Area,Midwest  Region
+228,KOVA,Kobuk Valley NP,National Park,Remote Area,Alaska Region
+229,OBRI,Obed W&SR,National Wild & Scenic River,Outlying Area,Southeast  Region
+230,JEFF,Gateway Arch NP,National Park,Urban Area,Midwest  Region
+364,CAVO,Capulin Volcano NM,National Monument,Rural Area,Intermountain  Region
+452,SAMO,Santa Monica Mountains NRA,National Recreation Area,Mixed Area,Pacific West  Region
+498,CUVA,Cuyahoga Valley NP,National Park,Mixed Area,Midwest  Region
+244,WRST,Wrangell-St. Elias NP & PRES,National Park,Rural Area,Alaska Region
+257,TONT,Tonto NM,National Monument,Rural Area,Intermountain  Region
+456,JAZZ,New Orleans Jazz NHP,National Historical Park,Urban Area,Southeast  Region
+258,PEFO,Petrified Forest NP,National Park,Rural Area,Intermountain  Region
+259,TIMU,Timucuan EHP,National Preserve,Suburban Area,Southeast  Region
+466,BLRI,Blue Ridge PKWY,National Parkway,Mixed Area,Southeast  Region
+459,COLM,Colorado NM,National Monument,Outlying Area,Intermountain  Region
+255,VICK,Vicksburg NMP,National Military Park,Mixed Area,Southeast  Region
+256,NOCA,North Cascades NP,National Park,Outlying Area,Pacific West  Region
+104,BISC,Biscayne NP,National Park,Suburban Area,Southeast  Region
+637,PAGR,Paterson Great Falls NHP,National Historical Park,Urban Area,Northeast  Region
+95,ARPO,Arkansas Post NMEM,National Memorial,Rural Area,Midwest  Region
+96,ARHO,Arlington House The R.E. Lee MEM,National Memorial,Urban Area,National Capital  Region
+264,SCBL,Scotts Bluff NM,National Monument,Rural Area,Midwest  Region
+270,CHPI,Charles Pinckney NHS,National Historic Site,Urban Area,Southeast  Region
+272,CHRI,Christiansted NHS,National Historic Site,Rural Area,Southeast  Region
+273,CACO,Cape Cod NS,National Seashore,Outlying Area,Northeast  Region
+274,CHCH,Chickamauga & Chattanooga NMP,National Military Park,Outlying Area,Southeast  Region
+306,GUMO,Guadalupe Mountains NP,National Park,Mixed Area,Intermountain  Region
+376,HOBE,Horseshoe Bend NMP,National Military Park,Rural Area,Southeast  Region
+406,APIS,Apostle Islands NL,National Lakeshore,Remote Area,Midwest  Region
+377,FOMC,Fort McHenry NM & HS,National Monument,Urban Area,Northeast  Region
+146,RABR,Rainbow Bridge NM,National Monument,Remote Area,Intermountain  Region
+147,VAFO,Valley Forge NHP,National Historical Park,Urban Area,Northeast  Region
+288,CANY,Canyonlands NP,National Park,Rural Area,Intermountain  Region
+336,ORPI,Organ Pipe Cactus NM,National Monument,Suburban Area,Intermountain  Region
+338,SARA,Saratoga NHP,National Historical Park,Outlying Area,Northeast  Region
+291,DEWA,Delaware Water Gap NRA,National Recreation Area,Mixed Area,Northeast  Region
+292,GWMP,George Washington MEM PKWY,National Parkway,Urban Area,National Capital  Region
+379,WICA,Wind Cave NP,National Park,Rural Area,Midwest  Region
+296,GOGA,Golden Gate NRA,National Recreation Area,Suburban Area,Pacific West  Region
+652,BLRV,Blackstone River Valley NHP,National Historical Park,Urban Area,Northeast  Region
+653,CAMO,Castle Mountains NM,National Monument,Suburban Area,Pacific West  Region
+304,HOSP,Hot Springs NP,National Park,Outlying Area,Midwest  Region
+310,LIBI,Little Bighorn Battlefield NM,National Monument,Rural Area,Intermountain  Region
+268,ASIS,Assateague Island NS,National Seashore,Mixed Area,Northeast  Region
+502,FRSP,Fredericksburg & Spotsylvania NMP,National Military Park,Mixed Area,Northeast  Region
+312,LIHO,Lincoln Home NHS,National Historic Site,Urban Area,Midwest  Region
+522,CARL,Carl Sandburg Home NHS,National Historic Site,Outlying Area,Southeast  Region
+107,EDAL,Edgar Allan Poe NHS,National Historic Site,Urban Area,Northeast  Region
+315,CANA,Canaveral NS,National Seashore,Outlying Area,Southeast  Region
+103,BELA,Bering Land Bridge NPRES,National Preserve,Remote Area,Alaska Region
+108,CAKR,Cape Krusenstern NM,National Monument,Remote Area,Alaska Region
+319,JELA,Jean Lafitte NHP & PRES,National Historical Park,Suburban Area,Southeast  Region
+362,HOFU,Hopewell Furnace NHS,National Historic Site,Mixed Area,Northeast  Region
+448,ORCA,Oregon Caves NM & PRES,National Monument,Outlying Area,Pacific West  Region
+323,MORA,Mount Rainier NP,National Park,Suburban Area,Pacific West  Region
+630,MAPR,Manhattan Project NHP,National Historical Park,Outlying Area,Intermountain  Region
+324,MABE,Mary McLeod Bethune Council House NHS,National Historic Site,Urban Area,National Capital  Region
+326,SAHI,Sagamore Hill NHS,National Historic Site,Urban Area,Northeast  Region
+328,ROWI,Roger Williams NMEM,National Memorial,Urban Area,Northeast  Region
+412,ARCH,Arches NP,National Park,Rural Area,Intermountain  Region
+333,SITK,Sitka NHP,National Historical Park,Rural Area,Alaska Region
+335,SAJU,San Juan NHS,National Historic Site,Urban Area,Southeast  Region
+383,FONE,Fort Necessity NB,National Battlefield,Suburban Area,Northeast  Region
+638,BEPA,Belmont-Paul Women's Equality NM,National Monument,Urban Area,National Capital  Region
+341,SACN,Saint Croix NSR,National Wild & Scenic River,Rural Area,Midwest  Region
+639,PULL,Pullman NHP,National Historical Park,Urban Area,Midwest  Region
+643,BOHA,Boston Harbor Islands NRA,National Recreation Area,Urban Area,Northeast  Region
+644,DDEM,Dwight D. Eisenhower MEM,National Memorial,Urban Area,National Capital  Region
+339,PIRO,Pictured Rocks NL,National Lakeshore,Rural Area,Midwest  Region
+343,ROLA,Ross Lake NRA,National Recreation Area,Outlying Area,Pacific West  Region
+492,JOMU,John Muir NHS,National Historic Site,Suburban Area,Pacific West  Region
+118,CACH,Canyon de Chelly NM,National Monument,Rural Area,Intermountain  Region
+113,DEPO,Devils Postpile NM,National Monument,Outlying Area,Pacific West  Region
+114,FOLA,Fort Laramie NHS,National Historic Site,Rural Area,Intermountain  Region
+115,FOFR,Fort Frederica NM,National Monument,Outlying Area,Southeast  Region
+349,STRI,Stones River NB,National Battlefield,Suburban Area,Southeast  Region
+384,GETT,Gettysburg NMP,National Military Park,Rural Area,Northeast  Region
+385,ROCR,Rock Creek Park,Park (Other),Urban Area,National Capital  Region
+311,HOCU,Hopewell Culture NHP,National Historical Park,Rural Area,Midwest  Region
+263,THRB,Theodore Roosevelt Birthplace NHS,National Historic Site,Urban Area,Northeast  Region
+367,FOVA,Fort Vancouver NHS,National Historic Site,Urban Area,Pacific West  Region
+374,EVER,Everglades NP,National Park,Mixed Area,Southeast  Region
+375,FOBU,Fossil Butte NM,National Monument,Rural Area,Intermountain  Region
+386,LEWI,Lewis & Clark NHP,National Historical Park,Rural Area,Pacific West  Region
+276,COWP,Cowpens NB,National Battlefield,Rural Area,Southeast  Region
+378,FRLA,Frederick Law Olmsted NHS,National Historic Site,Urban Area,Northeast  Region
+457,NEPE,Nez Perce NHP,National Historical Park,Rural Area,Pacific West  Region
+380,NAVA,Navajo NM,National Monument,Rural Area,Intermountain  Region
+525,BITH,Big Thicket NPRES,National Preserve,Mixed Area,Intermountain  Region
+570,FOSM,Fort Smith NHS,National Historic Site,Mixed Area,Midwest  Region
+395,HOME,Homestead NHP,National Historical Park,Rural Area,Midwest  Region
+389,CEBR,Cedar Breaks NM,National Monument,Rural Area,Intermountain  Region
+388,DAAV,Dayton Aviation Heritage NHP,National Historical Park,Outlying Area,Midwest  Region
+391,CACL,Castle Clinton NM,National Monument,Urban Area,Northeast  Region
+392,VOYA,Voyageurs NP,National Park,Outlying Area,Midwest  Region
+393,JODR,"John D. Rockefeller, Jr. MEM PKWY",National Parkway,Rural Area,Intermountain  Region
+486,BICA,Bighorn Canyon NRA,National Recreation Area,Rural Area,Intermountain  Region
+153,YUCH,Yukon-Charley Rivers NPRES,National Preserve,Rural Area,Alaska Region
+154,PIPE,Pipestone NM,National Monument,Rural Area,Midwest  Region
+155,PETR,Petroglyph NM,National Monument,Outlying Area,Intermountain  Region
+511,REDW,Redwood NP,National Park,Rural Area,Pacific West  Region
+513,CHSC,Little Rock Central High School NHS,National Historic Site,Urban Area,Midwest  Region
+396,CUGA,Cumberland Gap NHP,National Historical Park,Rural Area,Southeast  Region
+398,LAKE,Lake Mead NRA,National Recreation Area,Mixed Area,Pacific West  Region
+399,GRTE,Grand Teton NP,National Park,Rural Area,Intermountain  Region
+407,SPAR,Springfield Armory NHS,National Historic Site,Urban Area,Northeast  Region
+436,PUHE,Pu'ukohola Heiau NHS,National Historic Site,Rural Area,Pacific West  Region
+442,SAPU,Salinas Pueblo Missions NM,National Monument,Mixed Area,Intermountain  Region
+405,WORI,Women's Rights NHP,National Historical Park,Rural Area,Northeast  Region
+417,PORE,Point Reyes NS,National Seashore,Suburban Area,Pacific West  Region
+421,YELL,Yellowstone NP,National Park,Rural Area,Intermountain  Region
+623,RORI,Rosie The Riveter WWII Home Front NHP,National Historical Park,Urban Area,Pacific West  Region
+409,GLBA,Glacier Bay NP & PRES,National Park,Remote Area,Alaska Region
+410,SHEN,Shenandoah NP,National Park,Mixed Area,Northeast  Region
+416,SHIL,Shiloh NMP,National Military Park,Rural Area,Southeast  Region
+414,WACA,Walnut Canyon NM,National Monument,Outlying Area,Intermountain  Region
+334,PINN,Pinnacles NP,National Park,Suburban Area,Pacific West  Region
+432,WUPA,Wupatki NM,National Monument,Outlying Area,Intermountain  Region
+427,WAPA,War in the Pacific NHP,National Historical Park,Remote Area,Pacific West  Region
+462,CHIC,Chickasaw NRA,National Recreation Area,Rural Area,Intermountain  Region
+431,OLYM,Olympic NP,National Park,Rural Area,Pacific West  Region
+441,KLGO,Klondike Gold Rush NHP Alaska,National Historical Park,Rural Area,Alaska Region
+428,MORR,Morristown NHP,National Historical Park,Suburban Area,Northeast  Region
+429,EFMO,Effigy Mounds NM,National Monument,Rural Area,Midwest  Region
+322,NEBE,New Bedford Whaling NHP,National Historical Park,Urban Area,Northeast  Region
+503,OKCI,Oklahoma City NMEM,National Memorial,Urban Area,Intermountain  Region
+461,GAAR,Gates of the Arctic NP & PRES,National Park,Remote Area,Alaska Region
+253,PUHO,Pu'uhonua o Honaunau NHP,National Historical Park,Rural Area,Pacific West  Region
+463,CORO,Coronado NMEM,National Memorial,Outlying Area,Intermountain  Region
+433,JOTR,Joshua Tree NP,National Park,Suburban Area,Pacific West  Region
+351,WRBR,Wright Brothers NMEM,National Memorial,Rural Area,Southeast  Region
+613,SARI,Salt River Bay NHP & Ecological Pres,National Historical Park,Rural Area,Southeast  Region
+413,ISRO,Isle Royale NP,National Park,Remote Area,Midwest  Region
+614,FLNI,Flight 93 NMEM,National Memorial,Rural Area,Northeast  Region
+615,POCH,Port Chicago Naval Magazine NMEM,National Memorial,Suburban Area,Pacific West  Region
+616,AFBG,African Burial Ground NM,National Monument,Urban Area,Northeast  Region
+440,APCO,Appomattox Court House NHP,National Historical Park,Outlying Area,Northeast  Region
+401,ZION,Zion NP,National Park,Outlying Area,Intermountain  Region
+358,GREE,Greenbelt Park,Park (Other),Urban Area,National Capital  Region
+451,FOWA,Fort Washington Park,Park (Other),Urban Area,National Capital  Region
+224,PAIS,Padre Island NS,National Seashore,Rural Area,Intermountain  Region
+454,PETE,Petersburg NB,National Battlefield,Mixed Area,Northeast  Region
+465,ANIA,Aniakchak NM & PRES,National Monument,Remote Area,Alaska Region
+468,MANA,Manassas NBP,National Battlefield Park,Suburban Area,National Capital  Region
+482,WHIS,Whiskeytown NRA,National Recreation Area,Outlying Area,Pacific West  Region
+487,LONG,Longfellow House Washington's HQ NHS,National Historic Site,Urban Area,Northeast  Region
+470,LOWE,Lowell NHP,National Historical Park,Urban Area,Northeast  Region
+474,NATR,Natchez Trace PKWY,National Parkway,Mixed Area,Southeast  Region
+475,GLCA,Glen Canyon NRA,National Recreation Area,Rural Area,Intermountain  Region
+248,WICR,Wilson's Creek NB,National Battlefield,Outlying Area,Midwest  Region
+250,WHMI,Whitman Mission NHS,National Historic Site,Outlying Area,Pacific West  Region
+520,PISP,Pipe Spring NM,National Monument,Outlying Area,Intermountain  Region
+458,CURE,Curecanti NRA,National Recreation Area,Rural Area,Intermountain  Region
+477,HAMP,Hampton NHS,National Historic Site,Urban Area,Northeast  Region
+480,BRCA,Bryce Canyon NP,National Park,Rural Area,Intermountain  Region
+491,NERI,New River Gorge NP & PRES,National Park,Outlying Area,Northeast  Region
+234,FIIS,Fire Island NS,National Seashore,Suburban Area,Northeast  Region
+455,JODA,John Day Fossil Beds NM,National Monument,Rural Area,Pacific West  Region
+236,TUIN,Tuskegee Institute NHS,National Historic Site,Rural Area,Southeast  Region
+237,WOTR,Wolf Trap NP for the Performing Arts,Park (Other),Urban Area,National Capital  Region
+238,LYJO,Lyndon B. Johnson NHP,National Historical Park,Rural Area,Intermountain  Region
+239,LIBO,Lincoln Boyhood NMEM,National Memorial,Rural Area,Midwest  Region
+485,BIBE,Big Bend NP,National Park,Rural Area,Intermountain  Region
+489,ACAD,Acadia NP,National Park,Rural Area,Northeast  Region
+512,FOBO,Fort Bowie NHS,National Historic Site,Outlying Area,Intermountain  Region
+493,FOST,Fort Stanwix NM,National Monument,Outlying Area,Northeast  Region
+499,KEFJ,Kenai Fjords NP,National Park,Rural Area,Alaska Region
+504,MANZ,Manzanar NHS,National Historic Site,Rural Area,Pacific West  Region
+506,FOUS,Fort Union Trading Post NHS,National Historic Site,Rural Area,Midwest  Region
+494,FODA,Fort Davis NHS,National Historic Site,Rural Area,Intermountain  Region
+185,FOPO,Fort Point NHS,National Historic Site,Urban Area,Pacific West  Region
+187,FOMA,Fort Matanzas NM,National Monument,Mixed Area,Southeast  Region
+344,ROMO,Rocky Mountain NP,National Park,Mixed Area,Intermountain  Region
+345,THIS,Theodore Roosevelt Island,National Memorial,Urban Area,National Capital  Region
+497,RICH,Richmond NBP,National Battlefield Park,Suburban Area,Northeast  Region
+402,CARE,Capitol Reef NP,National Park,Rural Area,Intermountain  Region
+316,GRSM,Great Smoky Mountains NP,National Park,Mixed Area,Southeast  Region
+568,BOAF,Boston African American NHS,National Historic Site,Urban Area,Northeast  Region
+515,ALPO,Allegheny Portage Railroad NHS,National Historic Site,Outlying Area,Northeast  Region
+501,PISC,Piscataway Park,Park (Other),Suburban Area,National Capital  Region
+207,KALA,Kalaupapa NHP,National Historical Park,Remote Area,Pacific West  Region
+517,FRHI,Friendship Hill NHS,National Historic Site,Suburban Area,Northeast  Region
+559,LARO,Lake Roosevelt NRA,National Recreation Area,Mixed Area,Pacific West  Region
+578,GLAC,Glacier NP,National Park,Rural Area,Intermountain  Region
+582,FRDE,Franklin Delano Roosevelt MEM,National Memorial,Urban Area,National Capital  Region
+561,FILA,First Ladies NHS,National Historic Site,Urban Area,Midwest  Region
+518,BICY,Big Cypress NPRES,National Preserve,Outlying Area,Southeast  Region
+415,CHIS,Channel Islands NP,National Park,Outlying Area,Pacific West  Region
+418,MALU,"Martin Luther King, Jr. NHP",National Historical Park,Urban Area,Southeast  Region
+555,TUMA,Tumacacori NHP,National Historical Park,Rural Area,Intermountain  Region
+175,BOST,Boston NHP,National Historical Park,Urban Area,Northeast  Region
+529,CHCU,Chaco Culture NHP,National Historical Park,Outlying Area,Intermountain  Region
+178,ELMA,El Malpais NM,National Monument,Rural Area,Intermountain  Region
+180,BUFF,Buffalo NR,National River,Rural Area,Midwest  Region
+617,SAND,Sand Creek Massacre NHS,National Historic Site,Rural Area,Intermountain  Region
+618,MISS,Mississippi NRRA,National River,Mixed Area,Midwest  Region
+619,WICL,President W.J. Clinton Birthplace Home NHS,National Historic Site,Rural Area,Southeast  Region
+594,FRDO,Frederick Douglass NHS,National Historic Site,Urban Area,National Capital  Region
+562,PERI,Pea Ridge NMP,National Military Park,Outlying Area,Midwest  Region
+563,NPSA,National Park of American Samoa,National Park,Rural Area,Pacific West  Region
+565,JOFI,John F. Kennedy NHS,National Historic Site,Urban Area,Northeast  Region
+585,VIVE,Vietnam Veterans MEM,National Memorial,Urban Area,National Capital  Region
+566,ULSG,Ulysses S. Grant NHS,National Historic Site,Urban Area,Midwest  Region
+581,MORU,Mount Rushmore NMEM,National Memorial,Outlying Area,Midwest  Region
+551,WHHO,White House,Park (Other),Urban Area,National Capital  Region
+553,PRPA,President's Park,Park (Other),Urban Area,National Capital  Region
+516,MAVA,Martin Van Buren NHS,National Historic Site,Rural Area,Northeast  Region
+557,YOSE,Yosemite NP,National Park,Rural Area,Pacific West  Region
+569,HAFE,Harpers Ferry NHP,National Historical Park,Suburban Area,National Capital  Region
+541,CHAM,Chamizal NMEM,National Memorial,Urban Area,Intermountain  Region
+589,KOWA,Korean War Veterans Memorial,National Memorial,Urban Area,National Capital  Region
+605,LIRI,Little River Canyon NPRES,National Preserve,Rural Area,Southeast  Region
+606,GOIS,Governors Island NM,National Monument,Urban Area,Northeast  Region
+607,PAAL,Palo Alto Battlefield NHP,National Historical Park,Outlying Area,Intermountain  Region
+609,MIMI,Minuteman Missile NHS,National Historic Site,Rural Area,Midwest  Region
+577,FOTH,Ford's Theatre NHS,National Historic Site,Urban Area,National Capital  Region
+580,ANDE,Andersonville NHS,National Historic Site,Rural Area,Southeast  Region
+583,SAMA,Salem Maritime NHS,National Historic Site,Urban Area,Northeast  Region
+584,LINC,Lincoln Memorial,National Memorial,Urban Area,National Capital  Region
+586,JEFM,Thomas Jefferson MEM,National Memorial,Urban Area,National Capital  Region
+588,ALFL,Alibates Flint Quarries NM,National Monument,Outlying Area,Intermountain  Region
+587,MUWO,Muir Woods NM,National Monument,Suburban Area,Pacific West  Region
+591,HSTR,Harry S Truman NHS,National Historic Site,Urban Area,Midwest  Region
+597,CARI,Cane River Creole NHP,National Historical Park,Rural Area,Southeast  Region
+567,KAHO,Kaloko Honokohau NHP,National Historical Park,Rural Area,Pacific West  Region
+610,MNRR,Missouri NRR,National Wild & Scenic River,Rural Area,Midwest  Region
+611,BRVB,Brown v. Board of Education NHP,National Historical Park,Urban Area,Midwest  Region
+612,NIOB,Niobrara NSR,National Wild & Scenic River,Rural Area,Midwest  Region
+620,RIRA,River Raisin NBP,National Battlefield Park,Urban Area,Midwest  Region
+467,THRO,Theodore Roosevelt NP,National Park,Rural Area,Midwest  Region
+469,DENA,Denali NP & PRES,National Park,Mixed Area,Alaska Region
+621,MLKM,"Martin Luther King, Jr. Memorial",National Memorial,Urban Area,National Capital  Region
+622,SACR,Saint Croix Island IHS,International Historic Site,Rural Area,Northeast  Region
+172,DRTO,Dry Tortugas NP,National Park,Remote Area,Southeast  Region
+174,CONG,Congaree NP,National Park,Outlying Area,Southeast  Region
+449,JECA,Jewel Cave NM,National Monument,Rural Area,Midwest  Region
+245,SAPA,Saint Paul's Church NHS,National Historic Site,Urban Area,Northeast  Region
+327,SAGA,Saint-Gaudens NHP,National Historical Park,Rural Area,Northeast  Region
+329,SAFR,San Francisco Maritime NHP,National Historical Park,Suburban Area,Pacific West  Region
+528,UPDE,Upper Delaware S&RR,National Wild & Scenic River,Rural Area,Northeast  Region
+552,WABA,Washita Battlefield NHS,National Historic Site,Rural Area,Intermountain  Region
+134,GARI,Gauley River NRA,National Recreation Area,Mixed Area,Northeast  Region
+135,ANJO,Andrew Johnson NHS,National Historic Site,Rural Area,Southeast  Region
+136,PEVI,Perry's Victory & Intl. Peace MEM,National Memorial,Outlying Area,Midwest  Region
+648,MEMY,Medgar and Myrlie Evers Home NM,National Monument,Urban Area,Southeast  Region
+592,NCPC,National Capital Parks Central,Park (Other),Urban Area,National Capital  Region
+593,PAAV,Pennsylvania Avenue NHS,National Historic Site,Urban Area,National Capital  Region
+595,ADAM,Adams NHP,National Historical Park,Urban Area,Northeast  Region
+596,NCPE,National Capital Parks East,Park (Other),Urban Area,National Capital  Region
+598,BUIS,Buck Island Reef NM,National Monument,Rural Area,Southeast  Region
+603,JOFK,John F. Kennedy Center For Pa,Park (Other),Urban Area,National Capital  Region
+599,NAVC,National Visitor Center,Park (Other),Urban Area,National Capital  Region
+600,BRCR,Brices Cross Roads,National Battlefield Site,Rural Area,Southeast  Region
+601,NACA,National Capital Parks Combined,Park (Other),Urban Area,National Capital  Region
+602,TUPE,Tupelo NBS,National Battlefield Site,Rural Area,Southeast  Region
+423,GUIS,Gulf Islands NS,National Seashore,Outlying Area,Southeast  Region
+425,SLBE,Sleeping Bear Dunes NL,National Lakeshore,Rural Area,Midwest  Region
+439,BISO,Big South Fork NRRA,National River,Rural Area,Southeast  Region
+471,MACA,Mammoth Cave NP,National Park,Outlying Area,Southeast  Region
+473,GRCA,Grand Canyon NP,National Park,Outlying Area,Intermountain  Region
+355,VIIS,Virgin Islands NP,National Park,Rural Area,Southeast  Region
+356,THRI,Theodore Roosevelt Inaugural NHS,National Historic Site,Urban Area,Northeast  Region
+403,SEQU,Sequoia NP,National Park,Outlying Area,Pacific West  Region
+420,SUCR,Sunset Crater Volcano NM,National Monument,Outlying Area,Intermountain  Region
+422,BLCA,Black Canyon of the Gunnison NP,National Park,Rural Area,Intermountain  Region
+424,CHOH,Chesapeake & Ohio Canal NHP,National Historical Park,Mixed Area,National Capital  Region
+496,LAMR,Lake Meredith NRA,National Recreation Area,Mixed Area,Intermountain  Region
+554,MEVE,Mesa Verde NP,National Park,Rural Area,Intermountain  Region
+556,SAIR,Saugus Iron Works NHS,National Historic Site,Urban Area,Northeast  Region
+558,HAVO,Hawaii Volcanoes NP,National Park,Rural Area,Pacific West  Region
+560,SAGU,Saguaro NP,National Park,Suburban Area,Intermountain  Region
+571,CAVE,Carlsbad Caverns NP,National Park,Rural Area,Intermountain  Region
+572,LAVO,Lassen Volcanic NP,National Park,Mixed Area,Pacific West  Region
+573,STLI,Statue of Liberty NM,National Monument,Urban Area,Northeast  Region
+575,PERL,Pearl Harbor NMEM,National Memorial,Urban Area,Pacific West  Region
+576,CALO,Cape Lookout NS,National Seashore,Remote Area,Southeast  Region
+305,GUCO,Guilford Courthouse NMP,National Military Park,Urban Area,Southeast  Region
+307,MAWA,Maggie L. Walker NHS,National Historic Site,Urban Area,Northeast  Region
+277,CHAT,Chattahoochee River NRA,National Recreation Area,Urban Area,Southeast  Region
+523,CASA,Castillo de San Marcos NM,National Monument,Urban Area,Southeast  Region
+278,COLO,Colonial NHP,National Historical Park,Suburban Area,Northeast  Region
+298,GRKO,Grant-Kohrs Ranch NHS,National Historic Site,Rural Area,Intermountain  Region
+302,HAGR,Hamilton Grange NMEM,National Memorial,Urban Area,Northeast  Region
+317,KATM,Katmai NP & PRES,National Park,Remote Area,Alaska Region
+346,TAPR,Tallgrass Prairie NPRES,National Preserve,Rural Area,Midwest  Region
+382,GRBA,Great Basin NP,National Park,Rural Area,Pacific West  Region
+394,DEVA,Death Valley NP,National Park,Rural Area,Pacific West  Region
+478,INDU,Indiana Dunes NP,National Park,Mixed Area,Midwest  Region
+160,FOCA,Fort Caroline NMEM,National Memorial,Mixed Area,Southeast  Region
+162,BAND,Bandelier NM,National Monument,Outlying Area,Intermountain  Region
+366,EDIS,Thomas Edison NHP,National Historical Park,Urban Area,Northeast  Region
+197,FOUN,Fort Union NM,National Monument,Rural Area,Intermountain  Region
+199,GRPO,Grand Portage NM,National Monument,Rural Area,Midwest  Region
+201,HALE,Haleakala NP,National Park,Outlying Area,Pacific West  Region
+287,FEHA,Federal Hall NMEM,National Memorial,Urban Area,Northeast  Region
+289,DINO,Dinosaur NM,National Monument,Rural Area,Intermountain  Region
+450,INDE,Independence NHP,National Historical Park,Urban Area,Northeast  Region
+202,HUTR,Hubbell Trading Post NHS,National Historic Site,Rural Area,Intermountain  Region
