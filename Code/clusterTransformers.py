@@ -80,6 +80,12 @@ class COLOR:
     END = '\033[0m'
 
 
+def preprocess_data(raw_data: str = None, dict_data: str = None, echo: bool = True, reset_seeds: bool = True) -> pd.DataFrame:
+    raw_data_path = relative_path / "Data" / raw_data
+    raw_data = pd.read_excel(raw_data_path)
+    raw_data = clean_data(raw_data)
+
+
 def make_table(values: pd.Series, dropna: bool = False, dec: int = 3) -> pd.DataFrame:
     """Output a frequency table for a set of values.
 
@@ -595,14 +601,13 @@ def merge_model_data(models: list = None) -> pd.DataFrame:
         merged_data = pd.concat([merged_data, data]).reset_index(drop=True) # Concat the data to the frame
     return(merged_data)
 
-def update_geodesic_park_data(coded_data, n: bool = None):
+def update_geodesic_park_data(n: bool = None):
     filepath = relative_path / 'Data' / 'parkInformation.xlsx'
     parkData = pd.read_excel(filepath, 
                   names=['park_id', 'unit_code', 'name', 'designation', 'population_center',
                          'region', 'stats_reporting', 'sem_eligible', 'use_type', 'size',
                          'sem_draw'])
     parkData = add_park_geodesic_info(parkData, n = n)
-    parkData['weight_peak'] = parkData['unit_code'].map(coded_data[['x_unitcode', 'weight_peak']].drop_duplicates().set_index('x_unitcode')['weight_peak'])
     save_data(parkData, 'parkInformationGeodesic', parquet=False)
 
 def is_mainland_us(state):
