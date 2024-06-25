@@ -80,10 +80,24 @@ class COLOR:
     END = '\033[0m'
 
 
-def preprocess_data(raw_data: str = None, dict_data: str = None, echo: bool = True, reset_seeds: bool = True) -> pd.DataFrame:
-    raw_data_path = relative_path / "Data" / raw_data
-    raw_data = pd.read_excel(raw_data_path)
-    raw_data = clean_data(raw_data)
+def preprocess_data(rawData: str = None, dictData: str = None, echo: bool = True, reset_seeds: bool = True, update_geodesic: bool = False, save: bool = False) -> pd.DataFrame:
+    # Dictionary
+    dictData_path = relative_path / "Data" / dictData
+    dictData = pd.read_excel(dictData_path, sheet_name='Dictionary', usecols='A:D')
+    dictData.columns = [c.lower().replace(' ', '_') for c in dictData.columns]
+
+    # Data
+    rawData_path = relative_path / "Data" / rawData
+    rawData = pd.read_excel(rawData_path)
+    # rawData = data
+    cleanData = clean_data(rawData)
+
+    if update_geodesic:
+        update_geodesic_park_data()
+    geodesicData = pd.read_excel(relative_path / 'Data' / 'parkInformationGeodesic.xlsx')
+    data = code_data(data_clean=cleanData, data_ref=dictData, save=save, geodesic_park_information=geodesicData)
+    
+    return data
 
 
 def make_table(values: pd.Series, dropna: bool = False, dec: int = 3) -> pd.DataFrame:
@@ -114,10 +128,9 @@ def clean_data(data: pd.DataFrame = None) -> pd.DataFrame:
         print("ERROR: Specify DataFrame.")
 
     # Filtering Data to ensure they accepted the survey and they are eligible
-    data = data[(data['s_eligible'] == "1") & (data['s_intro'] == "1")]
-    # data = data[(data['s_eligible'] == 1) & (data['s_intro'] == 1)] # NEW DATA
+    data = data[(data['s_eligible'] == 1) & (data['s_intro'] == 1)]
     # Drop columns: 's_eligible', 's_intro' and 4 other columns (That are all NRB Related)
-    data = data.drop(columns=['s_eligible', 's_intro', 's_nrb', 's_nrb_residence', 's_nrb_us', 's_nrb_overnight', 's_datayear', 'o_eligible'])
+    data = data.drop(columns=['s_eligible', 's_intro', 's_nrb', 's_nrb_residence', 's_nrb_us', 's_nrb_overnight', 'o_eligible'])
     data = data.replace({'#NULL!':np.nan, None:np.nan}) # Converting #NULL!'s/None's to "NaN" datatype
     data = data.apply(pd.to_numeric, errors='ignore') # Convering column to numeric if possible
     data = data.reset_index(drop=True) # Resetting and droping the index column.
@@ -608,6 +621,14 @@ def update_geodesic_park_data(n: bool = None):
                          'region', 'stats_reporting', 'sem_eligible', 'use_type', 'size',
                          'sem_draw'])
     parkData = add_park_geodesic_info(parkData, n = n)
+    # Update SAJU Geodesic Information
+    parkData.loc[parkData['unit_code'] == 'SAJU', 'country_code'] = 'PR'
+    parkData.loc[parkData['unit_code'] == 'SAJU', 'place_name'] = 'San Juan'
+    parkData.loc[parkData['unit_code'] == 'SAJU', 'state_name'] = 'Puerto Rico'
+    parkData.loc[parkData['unit_code'] == 'SAJU', 'state_code'] = 'PR'
+    parkData.loc[parkData['unit_code'] == 'SAJU', 'county_name'] = 'San Juan'
+    parkData.loc[parkData['unit_code'] == 'SAJU', 'latitude'] = 18.4703
+    parkData.loc[parkData['unit_code'] == 'SAJU', 'longitude'] = -66.1233
     save_data(parkData, 'parkInformationGeodesic', parquet=False)
 
 def is_mainland_us(state):
@@ -628,8 +649,10 @@ def code_data(data_clean: pd.DataFrame = None, data_ref: pd.DataFrame = None, sa
     geodesic_user_information.columns = ["x_user_" + str(col) for col in geodesic_user_information.columns]
     coded_data = coded_data.join(geodesic_user_information)
     print(COLOR.BOLD, 'Added the users geodesic data.', COLOR.END, sep='')
-
+    # remove rows with nans
+    # return coded_data
     coded_data['x_distance_traveled'] = coded_data[['x_user_latitude', 'x_user_longitude', 'x_unitcode']].apply(lambda x: compute_haversine_distance(*x, geodesic_park_information), axis=1)
+    
     coded_data['x_distance_traveled'] = coded_data['x_distance_traveled'].astype("Float64")
 
     coded_data['x_race'] = coded_data[['m_race_native', 
@@ -703,6 +726,8 @@ def country_to_continent(country_name):
         return(None)
     if country_name == "Hong Kong (S.A.R.)":
         country_name = "China"
+    if country_name.startswith("Venezuela"):
+        country_name = "Venezuela"
     country_alpha2 = pc.country_name_to_country_alpha2(country_name)
     country_continent_code = pc.country_alpha2_to_continent_code(country_alpha2)
     country_continent_name = pc.convert_continent_code_to_continent_name(country_continent_code)
@@ -797,6 +822,12 @@ def compute_haversine_distance(u_lat: float = None, u_lon: float = None, p_unitc
     """
     if isnan(u_lat) or isnan(u_lon) or (p_unitcode is None):
         return(np.nan)
+    # print("p_unitcode: ", p_unitcode)
+    # Mary McLeod Bethune Council House National Historic Site has two unit codes
+    if p_unitcode == 'MAMC':
+        p_unitcode = 'MABE'
+    if p_unitcode == 'NACE':
+        p_unitcode = 'NCPE'
     geodesic_info = pd.DataFrame([geodesic_park_information[geodesic_park_information['unit_code'] == p_unitcode][['latitude', 'longitude']].values[0], [u_lat, u_lon]])
     geodesic_info = geodesic_info.applymap(radians) # Convert to Radians
     # Calculate and Extract Haversine Distance
